@@ -1,0 +1,106 @@
+<!-- Visited Places Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where I've Been - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Your Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visited.html">Travels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <div id="navbar-placeholder"></div>
+    <section id="visited-places" class="py-5 mt-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Where I've Been</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card visited-card">
+                        <img src="assets/img/visited-places/gaya.png" class="card-img-top" alt="Gaya">
+                        <div class="card-body">
+                            <h5 class="card-title">Gaya</h5>
+                            <p class="card-text">A city of ancient history and spiritual significance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card visited-card">
+                        <img src="assets/img/visited-places/rajgir.png" class="card-img-top" alt="Rajgir">
+                        <div class="card-body">
+                            <h5 class="card-title">Rajgir</h5>
+                            <p class="card-text">Nestled in the hills, a place of peace and heritage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card visited-card">
+                        <img src="assets/img/visited-places/delhi.png" class="card-img-top" alt="Delhi">
+                        <div class="card-body">
+                            <h5 class="card-title">Delhi</h5>
+                            <p class="card-text">The heart of India, where history meets modernity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card visited-card">
+                        <img src="assets/img/visited-places/varanasi.png" class="card-img-top" alt="Varanasi">
+                        <div class="card-body">
+                            <h5 class="card-title">Varanasi</h5>
+                            <p class="card-text">The spiritual capital of India, on the banks of the Ganges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card visited-card">
+                        <img src="assets/img/visited-places/deoghar.png" class="card-img-top" alt="Deoghar">
+                        <div class="card-body">
+                            <h5 class="card-title">Deoghar</h5>
+                            <p class="card-text">A major pilgrimage site with serene surroundings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Priaynshu Bhardwaj. All Rights Reserved.</p>
+            <div style="display: none;">pkp</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

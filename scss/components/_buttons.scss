@@ -1,0 +1,13 @@
+// Buttons styles
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    font-family: $primary-font;
+    font-weight: 600;
+    @include transition;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+    }
+}

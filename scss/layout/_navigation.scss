@@ -1,0 +1,86 @@
+// Navigation styles
+// .navbar {
+//     background-color: rgba(33, 37, 41, 0.8);
+//     backdrop-filter: blur(10px);
+//     @include transition;
+
+//     .nav-link {
+//         font-family: $primary-font;
+//         font-weight: 600;
+//         color: $light-text-color;
+
+//         &:hover {
+//             color: $primary-color;
+//         }
+//     }
+// }
+
+.navbar {
+    background-color: rgba(33, 37, 41, 0.9);
+    backdrop-filter: blur(10px);
+    @include transition(all, 0.3s, ease);
+
+    .navbar-brand {
+        font-family: $primary-font;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .nav-link {
+        font-family: $primary-font;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        padding: 0.5rem 0;
+        margin: 0 1rem;
+        display: flex;
+        align-items: center;
+        @include transition;
+
+        i {
+            @include transition(color, 0.3s, ease);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $primary-color;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            @include transition(transform, 0.4s, cubic-bezier(0.23, 1, 0.32, 1));
+        }
+
+        &:hover {
+            color: $light-text-color;
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+        
+        // Style for the active link
+        &.active {
+            color: $light-text-color;
+            i {
+              color: $primary-color;
+            }
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
+    // Hide the irrelevant nav based on the page
+    body:not(.is-homepage) #nav-for-index {
+        display: none !important;
+    }
+
+    body.is-homepage #nav-for-others {
+        display: none !important;
+    }
+}
